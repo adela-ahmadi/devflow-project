@@ -546,3 +546,31 @@ a {
   position: relative;
   z-index: 1;
 }
+
+/* == Testimonials == */
+.testimonial-card {
+  background: var(--df-panel);
+  border: 1px solid var(--df-line);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  height: 100%;
+}
+.quote-mark {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3rem;
+  color: var(--df-coral);
+  line-height: 1;
+  display: block;
+  margin-bottom: -0.5rem;
+}
+.avatar-lg {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
