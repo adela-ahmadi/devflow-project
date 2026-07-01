@@ -191,5 +191,176 @@
         </div>
       </div>
     </header>
+
+    <!-- == Trusted by == -->
+    <section class="trust-strip">
+      <div class="container">
+        <p
+          class="text-center text-soft mono mb-4"
+          style="font-size: 0.8rem; letter-spacing: 0.04em">
+          SYNCED WITH THE TOOLS YOUR TEAM ALREADY RUNS
+        </p>
+        <div
+          class="row justify-content-center align-items-center g-4 text-center">
+          <div class="col-4 col-md-2">
+            <span class="trust-word">GitHub</span>
+          </div>
+          <div class="col-4 col-md-2">
+            <span class="trust-word">GitLab</span>
+          </div>
+          <div class="col-4 col-md-2">
+            <span class="trust-word">Slack</span>
+          </div>
+          <div class="col-4 col-md-2">
+            <span class="trust-word">Linear</span>
+          </div>
+          <div class="col-4 col-md-2">
+            <span class="trust-word">VS&nbsp;Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- == Features ==-->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <span class="eyebrow justify-content-center mb-3"
+              >what devflow does</span
+            >
+            <h2>Everything a dev team needs, nothing it doesn't</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <span class="feature-icon" style="background: var(--df-violet)"
+                ><i class="bi bi-kanban"></i
+              ></span>
+              <h5 class="mb-2">Live Kanban boards</h5>
+              <p class="text-soft mb-0">
+                Drag a card and status, owner, and your team channel update at
+                once. No second system to keep in sync.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <span class="feature-icon" style="background: var(--df-coral)"
+                ><i class="bi bi-git"></i
+              ></span>
+              <h5 class="mb-2">Git-native tracking</h5>
+              <p class="text-soft mb-0">
+                Link commits and pull requests to tasks. Merge to main, and the
+                card moves itself to Done.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <span class="feature-icon" style="background: var(--df-mint)"
+                ><i class="bi bi-graph-up-arrow"></i
+              ></span>
+              <h5 class="mb-2">Sprint planning</h5>
+              <p class="text-soft mb-0">
+                Plan sprints straight from your backlog, with velocity and
+                capacity built in. No spreadsheets required.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <span class="feature-icon" style="background: var(--df-yellow)"
+                ><i class="bi bi-bar-chart-steps"></i
+              ></span>
+              <h5 class="mb-2">Team analytics</h5>
+              <p class="text-soft mb-0">
+                See cycle time, throughput, and blockers by person, repo, or
+                sprint — updated as work happens.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <span
+                class="feature-icon"
+                style="background: var(--df-violet-deep)"
+                ><i class="bi bi-chat-square-text"></i
+              ></span>
+              <h5 class="mb-2">Automated standups</h5>
+              <p class="text-soft mb-0">
+                DevFlow drafts your daily standup from yesterday's commits and
+                card moves. You just hit send.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <span class="feature-icon" style="background: #c24a2e"
+                ><i class="bi bi-plug"></i
+              ></span>
+              <h5 class="mb-2">Open API &amp; webhooks</h5>
+              <p class="text-soft mb-0">
+                Pull tasks into your own tools, or build automations on top of
+                DevFlow's REST and webhook API.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Navbar shadow on scroll
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 12) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+      });
+
+      // Scrollspy: highlight the nav link for the section currently in view
+      const navLinks = Array.from(
+        document.querySelectorAll("#navLinks .nav-link-df")
+      );
+      const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const setActive = (id) => {
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + id
+          );
+        });
+      };
+
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+      );
+
+      sections.forEach((section) => spy.observe(section));
+
+      // Default to Home when at the very top of the page
+      setActive("top");
+
+      // Close the mobile menu automatically after tapping a link
+      const navMenu = document.getElementById("navMenu");
+      const bsCollapse = navMenu
+        ? new bootstrap.Collapse(navMenu, { toggle: false })
+        : null;
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (bsCollapse && navMenu.classList.contains("show"))
+            bsCollapse.hide();
+        });
+      });
+    </script>
   </body>
 </html>
