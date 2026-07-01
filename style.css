@@ -477,3 +477,27 @@ a {
   color: #fff;
   margin-bottom: 1.1rem;
 }
+
+/* == How it works == */
+.step-card {
+  position: relative;
+  padding-left: 0;
+}
+.step-num {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--df-violet-light);
+  -webkit-text-stroke: 1.5px var(--df-violet);
+  line-height: 1;
+}
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--df-line) 0 8px,
+    transparent 8px 14px
+  );
+  margin-top: 1.3rem;
+}
