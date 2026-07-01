@@ -466,7 +466,7 @@
       </div>
     </section>
 
-    <!-- == Testimonials == -->
+    <!-- ===== Testimonials ===== -->
     <section class="section" id="testimonials">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
@@ -477,77 +477,162 @@
             <h2>Boards that finally tell the truth</h2>
           </div>
         </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="testimonial-card">
-              <span class="quote-mark">"</span>
-              <p class="text-soft mb-4">
-                We stopped updating two systems. DevFlow watches our repos, and
-                the board takes care of itself.
-              </p>
-              <div class="d-flex align-items-center gap-3">
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide carousel-fade testimonial-slider"
+          data-bs-ride="carousel"
+          data-bs-interval="7000"
+          data-bs-pause="hover">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="testimonial-slide"
+                style="
+                  --accent: var(--df-violet);
+                  --accent-tint: var(--df-violet-light);
+                ">
+                <span class="quote-mark-big">&rdquo;</span>
+                <p class="testimonial-quote">
+                  We stopped updating two systems. DevFlow watches our repos,
+                  and the board takes care of itself.
+                </p>
+                <div class="testimonial-author">
+                  <span class="avatar-lg" style="background: var(--df-violet)"
+                    >MC</span
+                  >
+                  <div>
+                    <div class="fw-bold" style="font-size: 0.92rem">
+                      Mira Chen
+                    </div>
+                    <div class="text-soft" style="font-size: 0.8rem">
+                      Engineering Lead, Fluxbase
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div
+                class="testimonial-slide"
+                style="
+                  --accent: var(--df-coral);
+                  --accent-tint: var(--df-coral-light);
+                ">
+                <span class="quote-mark-big">&rdquo;</span>
+                <p class="testimonial-quote">
+                  Six teams, one board, zero confusion. It's the first tracker
+                  our engineers actually keep open all day.
+                </p>
+                <div class="testimonial-author">
+                  <span class="avatar-lg" style="background: var(--df-coral)"
+                    >TR</span
+                  >
+                  <div>
+                    <div class="fw-bold" style="font-size: 0.92rem">
+                      Tomas Reyes
+                    </div>
+                    <div class="text-soft" style="font-size: 0.8rem">
+                      CTO, Nordlight
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div
+                class="testimonial-slide"
+                style="
+                  --accent: var(--df-mint);
+                  --accent-tint: var(--df-mint-light);
+                ">
+                <span class="quote-mark-big">&rdquo;</span>
+                <p class="testimonial-quote">
+                  The auto-drafted standup alone saved us ten minutes a day per
+                  engineer. That adds up fast.
+                </p>
+                <div class="testimonial-author">
+                  <span class="avatar-lg" style="background: var(--df-mint)"
+                    >PA</span
+                  >
+                  <div>
+                    <div class="fw-bold" style="font-size: 0.92rem">
+                      Priya Anand
+                    </div>
+                    <div class="text-soft" style="font-size: 0.8rem">
+                      Staff Engineer, Orbital
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-controls-row">
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+              aria-label="Previous testimonial">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+
+            <div class="carousel-indicators testimonial-indicators">
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Mira Chen, Fluxbase">
                 <span class="avatar-lg" style="background: var(--df-violet)"
                   >MC</span
                 >
-                <div>
-                  <div class="fw-bold" style="font-size: 0.92rem">
-                    Mira Chen
-                  </div>
-                  <div class="text-soft" style="font-size: 0.8rem">
-                    Engineering Lead, Fluxbase
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial-card">
-              <span class="quote-mark">"</span>
-              <p class="text-soft mb-4">
-                Six teams, one board, zero confusion. It's the first tracker our
-                engineers actually keep open all day.
-              </p>
-              <div class="d-flex align-items-center gap-3">
+                <span class="progress-track"
+                  ><span class="progress-fill"></span
+                ></span>
+              </button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="1"
+                aria-label="Tomas Reyes, Nordlight">
                 <span class="avatar-lg" style="background: var(--df-coral)"
                   >TR</span
                 >
-                <div>
-                  <div class="fw-bold" style="font-size: 0.92rem">
-                    Tomas Reyes
-                  </div>
-                  <div class="text-soft" style="font-size: 0.8rem">
-                    CTO, Nordlight
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial-card">
-              <span class="quote-mark">"</span>
-              <p class="text-soft mb-4">
-                The auto-drafted standup alone saved us ten minutes a day per
-                engineer. That adds up fast.
-              </p>
-              <div class="d-flex align-items-center gap-3">
+                <span class="progress-track"
+                  ><span class="progress-fill"></span
+                ></span>
+              </button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="2"
+                aria-label="Priya Anand, Orbital">
                 <span class="avatar-lg" style="background: var(--df-mint)"
                   >PA</span
                 >
-                <div>
-                  <div class="fw-bold" style="font-size: 0.92rem">
-                    Priya Anand
-                  </div>
-                  <div class="text-soft" style="font-size: 0.8rem">
-                    Staff Engineer, Orbital
-                  </div>
-                </div>
-              </div>
+                <span class="progress-track"
+                  ><span class="progress-fill"></span
+                ></span>
+              </button>
             </div>
+
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+              aria-label="Next testimonial">
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
     </section>
-
     <!-- == Pricing == -->
     <section class="section bg-violet-light" id="pricing">
       <div class="container">
