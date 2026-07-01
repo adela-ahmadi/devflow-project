@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevFlow — Task management that moves with your code</title>
+    <meta
+      name="description"
+      content="DevFlow is the cloud task board built for programming teams. Boards that update themselves when you commit, merge, and ship." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,269 +24,55 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>DevFlow</title>
   </head>
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
-    <nav
-      class="navbar sticky-top navbar-expand-lg bg-white border-bottom border-light py-3">
+  <body>
+    <!-- == Navbar ==-->
+    <nav class="navbar navbar-expand-lg navbar-df fixed-top" id="mainNav">
       <div class="container">
-        <!-- Brand Logo -->
-        <a
-          class="navbar-brand fw-bold fs-3 text-dark d-flex align-items-center"
-          href="#hero">
-          <div
-            class="logo-box rounded-3 d-flex align-items-center justify-content-center me-2 text-white"
-            style="
-              background: linear-gradient(135deg, #6366f1, #3b82f6);
-              width: 40px;
-              height: 40px;
-            ">
-            <i class="fa-solid fa-code-branch fs-5"></i>
-          </div>
-          Dev<span style="color: #6366f1">Flow</span>
+        <a class="navbar-brand brand-df" href="#top">
+          <span class="brand-mark"><i class="bi bi-columns-gap"></i></span>
+          DevFlow
         </a>
-
-        <!-- Mobile Toggle -->
         <button
-          class="navbar-toggler border-0"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
+          data-bs-target="#navMenu"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Menu Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold gap-1">
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto" id="navLinks">
             <li class="nav-item">
-              <a class="nav-link px-3" href="#hero">Home</a>
+              <a class="nav-link nav-link-df" href="#top">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#features">Features</a>
+              <a class="nav-link nav-link-df" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#analytics">Analytics</a>
+              <a class="nav-link nav-link-df" href="#how">How it works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#pricing">Pricing</a>
+              <a class="nav-link nav-link-df" href="#showcase">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#contact">Contact</a>
+              <a class="nav-link nav-link-df" href="#testimonials">Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-df" href="#pricing">Pricing</a>
             </li>
           </ul>
-
-          <!-- Action Buttons -->
-          <div class="d-flex align-items-center gap-3">
-            <a
-              href="#"
-              class="btn btn-link text-decoration-none text-secondary fw-semibold p-0"
-              >Sign In</a
-            >
-            <a
-              href="#pricing"
-              class="btn rounded-pill px-4 py-2 text-white fw-semibold shadow-sm"
-              style="
-                background: linear-gradient(135deg, #6366f1, #3b82f6);
-                border: none;
-              "
-              >Get Started</a
-            >
+          <div class="d-flex gap-2 mt-3 mt-lg-0">
+            <a href="#" class="btn nav-link-df fw-bold">Sign in</a>
+            <a href="#pricing" class="btn btn-df-primary">Start free</a>
           </div>
         </div>
       </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section
-      id="hero"
-      class="hero-section py-5 d-flex align-items-center position-relative overflow-hidden"
-      style="
-        min-height: calc(100vh - 80px);
-        background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
-      ">
-      <div
-        class="position-absolute bg-primary rounded-circle opacity-10 blur-3xl"
-        style="
-          width: 300px;
-          height: 300px;
-          top: -50px;
-          right: -50px;
-          background-color: #6366f1 !important;
-          filter: blur(120px);
-        "></div>
-      <div
-        class="position-absolute bg-info rounded-circle opacity-10 blur-3xl"
-        style="
-          width: 400px;
-          height: 400px;
-          bottom: -100px;
-          left: -100px;
-          background-color: #3b82f6 !important;
-          filter: blur(150px);
-        "></div>
-
-      <div class="container position-relative" style="z-index: 5">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 text-start">
-            <span
-              class="badge rounded-pill px-3 py-2 mb-3 fw-semibold d-inline-flex align-items-center gap-2"
-              style="color: #6366f1; background-color: rgba(99, 102, 241, 0.1)">
-              <i class="fa-solid fa-layer-group"></i> Version 2.0 Live Now
-            </span>
-            <h1 class="display-4 fw-bold text-dark mb-4 lh-sm">
-              The Automated Platform For <br />
-              <span
-                style="
-                  background: linear-gradient(to right, #6366f1, #3b82f6);
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                "
-                >Modern Code Teams</span
-              >
-            </h1>
-            <p
-              class="text-secondary fs-5 mb-4 lh-base"
-              style="max-width: 540px">
-              DevFlow unites your repository architecture, environment logs, and
-              continuous integration workflows inside a beautifully centralized
-              engineering control room.
-            </p>
-
-            <div class="d-flex flex-sm-row flex-column gap-3 mb-5">
-              <a
-                href="#features"
-                class="btn btn-lg rounded-pill px-5 py-3 fw-bold text-white shadow-lg-purple transition-all"
-                style="
-                  background: linear-gradient(135deg, #6366f1, #3b82f6);
-                  border: none;
-                "
-                >Deploy Free Workspace</a
-              >
-              <a
-                href="#"
-                class="btn btn-lg btn-outline-secondary bg-white rounded-pill px-4 py-3 fw-bold border-light shadow-sm text-dark d-flex align-items-center justify-content-center gap-2">
-                <i class="fa-solid fa-circle-play text-primary"></i> Explore
-                Ecosystem
-              </a>
-            </div>
-
-            <div
-              class="d-flex align-items-center gap-4 border-top border-light pt-4">
-              <div>
-                <h5 class="fw-bold text-dark mb-0">12M+</h5>
-                <span class="text-muted small">Pipelines Scanned</span>
-              </div>
-              <div class="border-start ps-4">
-                <h5 class="fw-bold text-dark mb-0">99.99%</h5>
-                <span class="text-muted small">Uptime Guaranteed</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div
-              class="dashboard-mockup bg-white rounded-4 shadow-xl border border-light p-3 position-relative">
-              <div
-                class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom border-light">
-                <div class="d-flex align-items-center gap-2">
-                  <span
-                    class="rounded-circle"
-                    style="
-                      width: 10px;
-                      height: 10px;
-                      background-color: #ef4444;
-                    "></span>
-                  <span
-                    class="rounded-circle"
-                    style="
-                      width: 10px;
-                      height: 10px;
-                      background-color: #f59e0b;
-                    "></span>
-                  <span
-                    class="rounded-circle"
-                    style="
-                      width: 10px;
-                      height: 10px;
-                      background-color: #10b981;
-                    "></span>
-                  <span class="text-muted small ms-2" style="font-size: 12px"
-                    >src/components/main-pipeline.yml</span
-                  >
-                </div>
-                <span
-                  class="badge bg-light text-success border border-success-subtle px-2 py-1 rounded"
-                  >Active</span
-                >
-              </div>
-
-              <div class="row g-3 text-start">
-                <div class="col-6">
-                  <div class="bg-light p-3 rounded-3 border">
-                    <span class="text-muted small d-block mb-1"
-                      >Deployment Success Rate</span
-                    >
-                    <h4 class="fw-bold text-dark mb-2">94.2%</h4>
-                    <div class="progress" style="height: 6px">
-                      <div
-                        class="progress-bar rounded"
-                        role="progressbar"
-                        style="width: 94%; background-color: #10b981"
-                        aria-valuenow="94"
-                        aria-minnav="0"
-                        aria-maxnav="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="bg-light p-3 rounded-3 border">
-                    <span class="text-muted small d-block mb-1"
-                      >Server Response Latency</span
-                    >
-                    <h4 class="fw-bold text-dark mb-2">14ms</h4>
-                    <div class="progress" style="height: 6px">
-                      <div
-                        class="progress-bar rounded"
-                        role="progressbar"
-                        style="width: 25%; background-color: #6366f1"
-                        aria-valuenow="25"
-                        aria-minnav="0"
-                        aria-maxnav="100"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <div
-                    class="p-3 rounded-3 text-white small"
-                    style="background-color: #0f172a; font-family: monospace">
-                    <div
-                      class="d-flex justify-content-between mb-1 text-white-50">
-                      <span
-                        >[INFO] Production deployment triggered by merge
-                        event</span
-                      >
-                      <span class="text-warning">14:02:11</span>
-                    </div>
-                    <div class="text-success">
-                      [SUCCESS] SSL handshakes validated. Encryption payload
-                      online.
-                    </div>
-                    <div class="text-info">
-                      [SYNC] Webhook communication bound to cluster branch
-                      endpoint.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </body>
 </html>
