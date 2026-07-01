@@ -478,11 +478,12 @@ a {
   margin-bottom: 1.1rem;
 }
 
-/* == How it works == */
+//* == How it works == */
 .step-card {
   position: relative;
   padding-left: 0;
 }
+
 .step-num {
   font-family: "Space Grotesk", sans-serif;
   font-size: 2.6rem;
@@ -491,6 +492,7 @@ a {
   -webkit-text-stroke: 1.5px var(--df-violet);
   line-height: 1;
 }
+
 .step-line {
   flex: 1;
   height: 2px;
