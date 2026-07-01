@@ -258,3 +258,197 @@ a {
   background: var(--df-mint-light);
   color: #027a66;
 }
+
+/* == Hero == */
+.hero {
+  padding: 7.5rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-blob {
+  position: absolute;
+  top: -120px;
+  right: -160px;
+  width: 520px;
+  height: 520px;
+  max-width: 60vw;
+  background: radial-gradient(
+    circle,
+    rgba(108, 92, 231, 0.16),
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4.6vw, 3.9rem);
+  line-height: 1.08;
+}
+
+/* Kanban mock board — signature element */
+.board-mock {
+  background: var(--df-panel);
+  border: 1px solid var(--df-line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px rgba(21, 19, 43, 0.12);
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.board-mock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.board-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.board-cols {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  min-width: 0;
+}
+.board-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.board-col-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--df-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.board-card {
+  background: var(--df-bg);
+  border: 1px solid var(--df-line);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.65rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.72rem;
+}
+.board-card .card-title-mini {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--df-ink);
+}
+.avatar-mini {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  float: right;
+}
+
+/* flying card animation — literal "flow" */
+.flying-card {
+  position: absolute;
+  width: 21%;
+  background: #fff;
+  border: 1.5px solid var(--df-violet);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.65rem;
+  font-size: 0.72rem;
+  box-shadow: 0 12px 28px rgba(108, 92, 231, 0.28);
+  animation: flowAcross 9s ease-in-out infinite;
+  z-index: 2;
+}
+@keyframes flowAcross {
+  0% {
+    left: 1.5%;
+    top: 68px;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  8% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  27% {
+    left: 1.5%;
+    top: 68px;
+  }
+  33% {
+    left: 26.5%;
+    top: 68px;
+  }
+  52% {
+    left: 26.5%;
+    top: 68px;
+  }
+  58% {
+    left: 51.5%;
+    top: 68px;
+  }
+  77% {
+    left: 51.5%;
+    top: 68px;
+  }
+  83% {
+    left: 76.5%;
+    top: 68px;
+    opacity: 1;
+  }
+  92% {
+    left: 76.5%;
+    top: 68px;
+    opacity: 1;
+  }
+  100% {
+    left: 76.5%;
+    top: 68px;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flying-card {
+    animation: none;
+    left: 76.5%;
+    top: 68px;
+    opacity: 1;
+  }
+}
+
+.stat-chip {
+  background: #fff;
+  border: 1px solid var(--df-line);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 12px 30px rgba(21, 19, 43, 0.08);
+}
+
+/* ===== Trusted by strip ===== */
+.trust-strip {
+  border-top: 1px solid var(--df-line);
+  border-bottom: 1px solid var(--df-line);
+  padding: 2.2rem 0;
+}
+.trust-word {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--df-ink-soft);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+.trust-word:hover {
+  opacity: 1;
+  color: var(--df-ink);
+}
