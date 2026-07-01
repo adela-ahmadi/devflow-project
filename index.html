@@ -87,99 +87,189 @@
         </div>
       </div>
     </nav>
+
+    <!-- Hero Section -->
     <section
       id="hero"
-      class="hero-section py-5 d-flex align-items-center bg-light position-relative overflow-hidden"
-      style="min-height: calc(100vh - 80px)">
-      <div class="container position-relative">
+      class="hero-section py-5 d-flex align-items-center position-relative overflow-hidden"
+      style="
+        min-height: calc(100vh - 80px);
+        background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+      ">
+      <div
+        class="position-absolute bg-primary rounded-circle opacity-10 blur-3xl"
+        style="
+          width: 300px;
+          height: 300px;
+          top: -50px;
+          right: -50px;
+          background-color: #6366f1 !important;
+          filter: blur(120px);
+        "></div>
+      <div
+        class="position-absolute bg-info rounded-circle opacity-10 blur-3xl"
+        style="
+          width: 400px;
+          height: 400px;
+          bottom: -100px;
+          left: -100px;
+          background-color: #3b82f6 !important;
+          filter: blur(150px);
+        "></div>
+
+      <div class="container position-relative" style="z-index: 5">
         <div class="row align-items-center g-5">
-          <!-- ستون سمت چپ: محتوای متنی و دکمه‌ها -->
           <div class="col-lg-6 text-start">
             <span
-              class="badge bg-indigo-subtle border border-indigo-subtle rounded-pill px-3 py-2 mb-3 fw-semibold"
+              class="badge rounded-pill px-3 py-2 mb-3 fw-semibold d-inline-flex align-items-center gap-2"
               style="color: #6366f1; background-color: rgba(99, 102, 241, 0.1)">
-              <i class="fa-solid fa-rocket me-2"></i>Next-Gen SaaS Code Manager
+              <i class="fa-solid fa-layer-group"></i> Version 2.0 Live Now
             </span>
             <h1 class="display-4 fw-bold text-dark mb-4 lh-sm">
-              Optimize Your Team's <br />
-              <span style="color: #6366f1">Development Workflow</span>
+              The Automated Platform For <br />
+              <span
+                style="
+                  background: linear-gradient(to right, #6366f1, #3b82f6);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+                >Modern Code Teams</span
+              >
             </h1>
-            <p class="text-muted fs-5 mb-5 lh-base">
-              DevFlow syncs your team's code tasks, tracking repositories and
-              pipelines in a single unified workspace. Built specifically for
-              modern DevOps engineering.
+            <p
+              class="text-secondary fs-5 mb-4 lh-base"
+              style="max-width: 540px">
+              DevFlow unites your repository architecture, environment logs, and
+              continuous integration workflows inside a beautifully centralized
+              engineering control room.
             </p>
-            <div class="d-flex flex-sm-row flex-column gap-3">
+
+            <div class="d-flex flex-sm-row flex-column gap-3 mb-5">
               <a
                 href="#features"
-                class="btn rounded-pill px-5 py-3 fw-bold text-white shadow-sm"
+                class="btn btn-lg rounded-pill px-5 py-3 fw-bold text-white shadow-lg-purple transition-all"
                 style="
                   background: linear-gradient(135deg, #6366f1, #3b82f6);
                   border: none;
                 "
-                >Start Free Trial</a
+                >Deploy Free Workspace</a
               >
               <a
                 href="#"
-                class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold border-2 d-flex align-items-center justify-content-center gap-2">
-                <i class="fa-solid fa-play"></i> Watch Demo
+                class="btn btn-lg btn-outline-secondary bg-white rounded-pill px-4 py-3 fw-bold border-light shadow-sm text-dark d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-circle-play text-primary"></i> Explore
+                Ecosystem
               </a>
+            </div>
+
+            <div
+              class="d-flex align-items-center gap-4 border-top border-light pt-4">
+              <div>
+                <h5 class="fw-bold text-dark mb-0">12M+</h5>
+                <span class="text-muted small">Pipelines Scanned</span>
+              </div>
+              <div class="border-start ps-4">
+                <h5 class="fw-bold text-dark mb-0">99.99%</h5>
+                <span class="text-muted small">Uptime Guaranteed</span>
+              </div>
             </div>
           </div>
 
-          <!-- ستون سمت راست: شبیه‌ساز ترمینال کدنویسی -->
           <div class="col-lg-6">
             <div
-              class="mockup-window border rounded-4 shadow-lg p-3 text-start text-white position-relative"
-              style="
-                font-family: 'Courier New', Courier, monospace;
-                background-color: #1e1e24;
-                border-color: #2d2d35 !important;
-              ">
-              <!-- دکمه‌های سیستم‌عامل -->
-              <div class="d-flex gap-2 mb-3">
+              class="dashboard-mockup bg-white rounded-4 shadow-xl border border-light p-3 position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom border-light">
+                <div class="d-flex align-items-center gap-2">
+                  <span
+                    class="rounded-circle"
+                    style="
+                      width: 10px;
+                      height: 10px;
+                      background-color: #ef4444;
+                    "></span>
+                  <span
+                    class="rounded-circle"
+                    style="
+                      width: 10px;
+                      height: 10px;
+                      background-color: #f59e0b;
+                    "></span>
+                  <span
+                    class="rounded-circle"
+                    style="
+                      width: 10px;
+                      height: 10px;
+                      background-color: #10b981;
+                    "></span>
+                  <span class="text-muted small ms-2" style="font-size: 12px"
+                    >src/components/main-pipeline.yml</span
+                  >
+                </div>
                 <span
-                  class="rounded-circle"
-                  style="
-                    width: 12px;
-                    height: 12px;
-                    background-color: #ff5f56;
-                  "></span>
-                <span
-                  class="rounded-circle"
-                  style="
-                    width: 12px;
-                    height: 12px;
-                    background-color: #ffbd2e;
-                  "></span>
-                <span
-                  class="rounded-circle"
-                  style="
-                    width: 12px;
-                    height: 12px;
-                    background-color: #27c93f;
-                  "></span>
+                  class="badge bg-light text-success border border-success-subtle px-2 py-1 rounded"
+                  >Active</span
+                >
               </div>
-              <!-- کدهای داخل ترمینال -->
-              <div class="small p-2 opacity-75">
-                <p class="mb-1" style="color: #4af626">
-                  $ npm install -g devflow-cli
-                </p>
-                <p class="text-muted mb-2">
-                  Success! Installed devflow ecosystem tools.
-                </p>
-                <p class="mb-1" style="color: #00bfff">
-                  $ devflow connect --repo=main-branch
-                </p>
-                <p class="text-white-50 mb-1">
-                  > Initializing security pipeline scanners...
-                </p>
-                <p class="text-white-50 mb-1">
-                  > Binding continuous deployment webhooks...
-                </p>
-                <p class="mb-0" style="color: #4af626">
-                  > Connected successfully. System Flow Status: 100% OK
-                </p>
+
+              <div class="row g-3 text-start">
+                <div class="col-6">
+                  <div class="bg-light p-3 rounded-3 border">
+                    <span class="text-muted small d-block mb-1"
+                      >Deployment Success Rate</span
+                    >
+                    <h4 class="fw-bold text-dark mb-2">94.2%</h4>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar rounded"
+                        role="progressbar"
+                        style="width: 94%; background-color: #10b981"
+                        aria-valuenow="94"
+                        aria-minnav="0"
+                        aria-maxnav="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-light p-3 rounded-3 border">
+                    <span class="text-muted small d-block mb-1"
+                      >Server Response Latency</span
+                    >
+                    <h4 class="fw-bold text-dark mb-2">14ms</h4>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar rounded"
+                        role="progressbar"
+                        style="width: 25%; background-color: #6366f1"
+                        aria-valuenow="25"
+                        aria-minnav="0"
+                        aria-maxnav="100"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="p-3 rounded-3 text-white small"
+                    style="background-color: #0f172a; font-family: monospace">
+                    <div
+                      class="d-flex justify-content-between mb-1 text-white-50">
+                      <span
+                        >[INFO] Production deployment triggered by merge
+                        event</span
+                      >
+                      <span class="text-warning">14:02:11</span>
+                    </div>
+                    <div class="text-success">
+                      [SUCCESS] SSL handshakes validated. Encryption payload
+                      online.
+                    </div>
+                    <div class="text-info">
+                      [SYNC] Webhook communication bound to cluster branch
+                      endpoint.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
