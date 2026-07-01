@@ -622,3 +622,12 @@ a {
   border-radius: 999px;
   letter-spacing: 0.04em;
 }
+
+/* == CTA banner == */
+.cta-banner {
+  background: linear-gradient(120deg, var(--df-violet), var(--df-violet-deep));
+  border-radius: 28px;
+  padding: 4rem 3rem;
+  color: #fff;
+  text-align: center;
+}
