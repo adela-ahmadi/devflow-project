@@ -631,3 +631,106 @@ a {
   color: #fff;
   text-align: center;
 }
+
+/* == Footer == */
+.footer-df {
+  background: var(--df-ink);
+  color: #c9c6e0;
+  padding: 4.5rem 0 2rem;
+}
+.footer-df h6 {
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.2rem;
+}
+.footer-df a {
+  color: #c9c6e0;
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.92rem;
+  transition: color 0.15s ease;
+}
+.footer-df a:hover {
+  color: #fff;
+}
+.footer-social {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-right: 0.5rem;
+  transition: background 0.15s ease;
+}
+.footer-social:hover {
+  background: var(--df-violet);
+  border-color: var(--df-violet);
+}
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border-radius: 999px 0 0 999px;
+  padding: 0.7rem 1.2rem;
+}
+.newsletter-input::placeholder {
+  color: #9e9ac0;
+}
+.newsletter-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: none;
+  border-color: var(--df-violet);
+}
+
+/* focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--df-violet);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .board-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .board-card {
+    font-size: 0.68rem;
+  }
+  .board-card .card-title-mini {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .flying-card {
+    display: none;
+  }
+  .price-card.featured {
+    transform: none;
+  }
+  .showcase-panel {
+    padding: 2rem 1.4rem;
+  }
+  .hero {
+    padding: 6.5rem 0 3rem;
+    text-align: center;
+  }
+  .hero .d-flex.flex-wrap {
+    justify-content: center;
+  }
+  .eyebrow {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .board-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
