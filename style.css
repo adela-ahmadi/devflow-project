@@ -501,3 +501,46 @@ a {
   );
   margin-top: 1.3rem;
 }
+
+/* == Product showcase == */
+.showcase-panel {
+  background: var(--df-ink);
+  border-radius: 28px;
+  padding: 3.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.showcase-panel::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 74, 0.35),
+    transparent 70%
+  );
+  top: -100px;
+  left: -100px;
+}
+.diff-line {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+}
+.diff-add {
+  background: rgba(0, 179, 152, 0.18);
+  color: #6ee7c8;
+}
+.diff-context {
+  color: #b9b6d6;
+}
+.terminal-panel {
+  background: #1e1b3a;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  position: relative;
+  z-index: 1;
+}

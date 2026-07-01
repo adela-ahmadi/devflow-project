@@ -357,6 +357,72 @@
       </div>
     </section>
 
+    <!-- == Product showcase == -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <div class="showcase-panel">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 position-relative">
+              <span class="eyebrow mb-3" style="color: #b39cff"
+                >one board, every repo</span
+              >
+              <h2 class="text-white mb-3">Status that updates itself</h2>
+              <p class="mb-4" style="color: #b9b6d6">
+                Stop asking "is this done yet" in standup. When code merges,
+                DevFlow reads the commit, matches it to a card, and moves it —
+                automatically, in real time.
+              </p>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <i class="bi bi-check2 text-mint me-2"></i
+                  ><span style="color: #d8d6ec"
+                    >Works with any git-based workflow</span
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check2 text-mint me-2"></i
+                  ><span style="color: #d8d6ec"
+                    >Respects branch naming and commit conventions</span
+                  >
+                </li>
+                <li class="mb-0">
+                  <i class="bi bi-check2 text-mint me-2"></i
+                  ><span style="color: #d8d6ec"
+                    >Full history, so nothing gets lost in transit</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 position-relative">
+              <div class="terminal-panel">
+                <p class="mono mb-2" style="color: #8a86b8; font-size: 0.75rem">
+                  devflow · activity feed
+                </p>
+                <div class="d-flex flex-column gap-2">
+                  <span class="diff-line diff-context"
+                    >$ git push origin feature/rate-limit</span
+                  >
+                  <span class="diff-line diff-add"
+                    >+ PR #482 opened → card "Rate limit API" → In review</span
+                  >
+                  <span class="diff-line diff-context"
+                    >$ git merge feature/rate-limit → main</span
+                  >
+                  <span class="diff-line diff-add"
+                    >+ card "Rate limit API" → Done · assignee notified</span
+                  >
+                  <span
+                    class="diff-line diff-context mono"
+                    style="color: #6ee7c8"
+                    >✓ standup draft updated for tomorrow 9:00 AM</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
       // Navbar shadow on scroll
       const nav = document.getElementById("mainNav");
