@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>DevFlow</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <nav
+      class="navbar sticky-top navbar-expand-lg bg-white border-bottom border-light py-3">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a
+          class="navbar-brand fw-bold fs-3 text-dark d-flex align-items-center"
+          href="#hero">
+          <div
+            class="logo-box rounded-3 d-flex align-items-center justify-content-center me-2 text-white"
+            style="
+              background: linear-gradient(135deg, #6366f1, #3b82f6);
+              width: 40px;
+              height: 40px;
+            ">
+            <i class="fa-solid fa-code-branch fs-5"></i>
+          </div>
+          Dev<span style="color: #6366f1">Flow</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold gap-1">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#analytics">Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="d-flex align-items-center gap-3">
+            <a
+              href="#"
+              class="btn btn-link text-decoration-none text-secondary fw-semibold p-0"
+              >Sign In</a
+            >
+            <a
+              href="#pricing"
+              class="btn rounded-pill px-4 py-2 text-white fw-semibold shadow-sm"
+              style="
+                background: linear-gradient(135deg, #6366f1, #3b82f6);
+                border: none;
+              "
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section
+      id="hero"
+      class="hero-section py-5 d-flex align-items-center bg-light position-relative overflow-hidden"
+      style="min-height: calc(100vh - 80px)">
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <!-- ستون سمت چپ: محتوای متنی و دکمه‌ها -->
+          <div class="col-lg-6 text-start">
+            <span
+              class="badge bg-indigo-subtle border border-indigo-subtle rounded-pill px-3 py-2 mb-3 fw-semibold"
+              style="color: #6366f1; background-color: rgba(99, 102, 241, 0.1)">
+              <i class="fa-solid fa-rocket me-2"></i>Next-Gen SaaS Code Manager
+            </span>
+            <h1 class="display-4 fw-bold text-dark mb-4 lh-sm">
+              Optimize Your Team's <br />
+              <span style="color: #6366f1">Development Workflow</span>
+            </h1>
+            <p class="text-muted fs-5 mb-5 lh-base">
+              DevFlow syncs your team's code tasks, tracking repositories and
+              pipelines in a single unified workspace. Built specifically for
+              modern DevOps engineering.
+            </p>
+            <div class="d-flex flex-sm-row flex-column gap-3">
+              <a
+                href="#features"
+                class="btn rounded-pill px-5 py-3 fw-bold text-white shadow-sm"
+                style="
+                  background: linear-gradient(135deg, #6366f1, #3b82f6);
+                  border: none;
+                "
+                >Start Free Trial</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold border-2 d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-play"></i> Watch Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- ستون سمت راست: شبیه‌ساز ترمینال کدنویسی -->
+          <div class="col-lg-6">
+            <div
+              class="mockup-window border rounded-4 shadow-lg p-3 text-start text-white position-relative"
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                background-color: #1e1e24;
+                border-color: #2d2d35 !important;
+              ">
+              <!-- دکمه‌های سیستم‌عامل -->
+              <div class="d-flex gap-2 mb-3">
+                <span
+                  class="rounded-circle"
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background-color: #ff5f56;
+                  "></span>
+                <span
+                  class="rounded-circle"
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background-color: #ffbd2e;
+                  "></span>
+                <span
+                  class="rounded-circle"
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background-color: #27c93f;
+                  "></span>
+              </div>
+              <!-- کدهای داخل ترمینال -->
+              <div class="small p-2 opacity-75">
+                <p class="mb-1" style="color: #4af626">
+                  $ npm install -g devflow-cli
+                </p>
+                <p class="text-muted mb-2">
+                  Success! Installed devflow ecosystem tools.
+                </p>
+                <p class="mb-1" style="color: #00bfff">
+                  $ devflow connect --repo=main-branch
+                </p>
+                <p class="text-white-50 mb-1">
+                  > Initializing security pipeline scanners...
+                </p>
+                <p class="text-white-50 mb-1">
+                  > Binding continuous deployment webhooks...
+                </p>
+                <p class="mb-0" style="color: #4af626">
+                  > Connected successfully. System Flow Status: 100% OK
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
