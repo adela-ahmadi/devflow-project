@@ -634,9 +634,8 @@ a {
 
 /* == Footer == */
 .footer-df {
-  background: var(--df-ink);
   color: #c9c6e0;
-  padding: 4.5rem 0 2rem;
+  padding: 2rem 0 2rem; /* پدینگ بالا به دلیل وجود موج کمتر شده تا فواصل متقارن بمانند */
 }
 .footer-df h6 {
   color: #fff;
@@ -656,22 +655,28 @@ a {
 .footer-df a:hover {
   color: #fff;
 }
+
+/* رفع باگ چینش افقی و ابعاد آیکون‌های اجتماعی */
 .footer-social {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  display: inline-flex;
+  display: inline-flex !important; /* فیکس کردن تداخل با دیسپلی بلاک */
   align-items: center;
   justify-content: center;
-  color: #fff;
-  margin-right: 0.5rem;
-  transition: background 0.15s ease;
+  color: #fff !important;
+  margin-right: 0.6rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 .footer-social:hover {
-  background: var(--df-violet);
-  border-color: var(--df-violet);
+  background: #6366f1; /* همگام با تم ارغوانی پلتفرم */
+  border-color: #6366f1;
+  transform: translateY(-3px);
 }
+
 .newsletter-input {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -686,7 +691,14 @@ a {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   box-shadow: none;
-  border-color: var(--df-violet);
+  border-color: #6366f1;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
 }
 
 /* focus visibility */

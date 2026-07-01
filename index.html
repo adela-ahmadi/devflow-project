@@ -666,7 +666,30 @@
     </section>
 
     <!-- == Footer == -->
-    <footer class="footer-df">
+    <div
+      class="position-relative overflow-hidden"
+      style="
+        line-height: 0;
+        background-color: transparent;
+        margin-bottom: -1px;
+      ">
+      <!-- Wave Divider for Footer -->
+      <svg
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        style="
+          position: relative;
+          display: block;
+          width: calc(100% + 1.3px);
+          height: 70px;
+        ">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35C25,43.25,147,75.4,321.39,56.44Z"
+          style="fill: #0c112e"></path>
+      </svg>
+    </div>
+
+    <footer class="footer-df" style="background-color: #0c112e">
       <div class="container">
         <div class="row g-4 mb-5">
           <div class="col-lg-4">
@@ -681,12 +704,15 @@
               The cloud task board built for programming teams — boards that
               move with every commit.
             </p>
-            <div class="mt-3">
-              <a href="#" class="footer-social"><i class="bi bi-github"></i></a>
-              <a href="#" class="footer-social"
+            <div class="mt-4">
+              <!-- با اضافه کردن کلاس d-inline-flex مشکل چیدمان افقی برطرف شد -->
+              <a href="#" class="footer-social d-inline-flex"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a href="#" class="footer-social d-inline-flex"
                 ><i class="bi bi-twitter-x"></i
               ></a>
-              <a href="#" class="footer-social"
+              <a href="#" class="footer-social d-inline-flex"
                 ><i class="bi bi-linkedin"></i
               ></a>
             </div>
